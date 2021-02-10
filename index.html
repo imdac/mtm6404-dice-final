@@ -11,7 +11,11 @@
 <body>
   <div id="app" class="container">
     <div class="dice">
-      <div class="die">1</div>
+      <div  class="die" 
+        v-for="(die, index) in dice"
+        v-on:click="roll(index)">
+        {{ die }}
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
